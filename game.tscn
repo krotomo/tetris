@@ -9,9 +9,10 @@ texture = ExtResource("2_p34wi")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
 2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+3:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_u3iur"]
 sources/0 = SubResource("TileSetAtlasSource_8npcn")
@@ -21,3 +22,6 @@ script = ExtResource("1_cyka6")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_u3iur")
+
+[node name="FallTimer" type="Timer" parent="."]
+autostart = true
