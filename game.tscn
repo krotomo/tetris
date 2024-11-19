@@ -25,3 +25,6 @@ tile_set = SubResource("TileSet_u3iur")
 
 [node name="FallTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(80, 160)
