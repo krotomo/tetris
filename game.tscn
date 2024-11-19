@@ -21,10 +21,18 @@ sources/0 = SubResource("TileSetAtlasSource_8npcn")
 script = ExtResource("1_cyka6")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = 1
 tile_set = SubResource("TileSet_u3iur")
 
 [node name="FallTimer" type="Timer" parent="."]
-autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(80, 160)
+
+[node name="EndTurnTimer" type="Timer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(160, 320)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.784314)
