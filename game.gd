@@ -114,6 +114,17 @@ func end_turn():
 		return
 	for tile in piece:
 		blocks[tile.y][tile.x] = tile.z
+	for row in GRID_SIZE.y:
+		var full_row = true
+		for col in GRID_SIZE.x:
+			if blocks[row][col] == -1:
+				full_row = false
+				break
+		if full_row:
+			for row_to_move in range(row - 1, 0, -1):
+				for col in GRID_SIZE.x:
+					blocks[row_to_move + 1][col] = blocks[row_to_move][col]
+					blocks[row_to_move][col] = -1
 	spawn_piece()
 	update_tile_map()
 
